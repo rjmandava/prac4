@@ -17,6 +17,6 @@ int Truckloads::numTrucks(int numCrates, int loadSize) {
        return 2*numTrucks(numCrates/2, loadSize);
     }
     else {
-        return numTrucks((numCrates+1)/2, loadSize)+2*numTrucks(numCrates/2, loadSize);
+        return numTrucks((numCrates+1)/2, loadSize)+numTrucks(numCrates/2, loadSize);
     }
 }
